@@ -1,0 +1,57 @@
+<div *ngIf="film" class="container d-flex justify-content-center align-items-center">
+    <div class="box-detail d-flex flex-wrap justify-content-center align-items-start mt-4 py-4">
+        <div class="col-sm-12 col-lg-4">
+            <img src={{film.Poster}} alt="movie-poster" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div class="col-sm-12 col-lg-8 ">
+            <h1>{{film.Title}}</h1>
+            <br>
+            <h4>
+                <em class="fas fa-calendar-alt">
+                    <span class="font px-4">{{film.Year}}</span>
+                </em>
+            </h4>
+            <br>
+            <h4>
+                <em class="fas fa-clock">
+                    <span class="font px-4">{{film.Runtime}}</span>
+                </em>
+            </h4>
+            <br>
+            <h4>
+                <em class="fas fa-users">
+                    <span class="font px-4">{{film.Actors}}</span>
+                </em>
+            </h4>
+            <br>
+            <h4>
+                <em class="fas fa-award">
+                    <span class="font px-4">{{film.Awards}}</span>
+                </em>
+            </h4>
+            <br>
+            <h4>
+                <em class="fas fa-flag">
+                    <span class="font px-4">{{film.Country}}</span>
+                </em>
+            </h4>
+            <br>
+            <h4>
+                <em class="fas fa-search">
+                    <span class="font px-4">{{film.Genre}}</span>
+                </em>
+            </h4>
+            <br>
+            <h4>
+                <em class="fas fa-language">
+                    <span class="font px-4">{{film.Language}}</span>
+                </em>
+            </h4>
+        </div>
+        <div class="col-sm-12 col-lg-12 py-5">
+            <h3>Plot:</h3>
+            <br>
+            <h4>{{film.Plot}}</h4>
+        </div>
+    </div>
+</div>

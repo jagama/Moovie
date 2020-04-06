@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div class="body-content">
+        <!--search bar-->
+        <div class="input-group margin-input">
+            <div class="input-group-prepend">
+                <button class="btn btn-danger shape" (click)='tiling()'>Cerca Film</button>
+            </div>
+            <input [(ngModel)]='tile' type="text" class="form-control" placeholder="Inserisci titolo" aria-label="search box"
+                aria-describedby="basic-addon1">
+        </div>
+        <!--card deck-->
+        <div *ngIf='movies' class="d-flex flex-wrap justify-content-center align-items-center w-100 h-100">
+        <div  class="card corning corner" *ngFor='let movie of movies'>
+            <img src={{movie.Poster}} class="card-img-top corning" alt="poster" style='height: 400px; width: auto;'>
+            <div class="card-body">
+                <h6 class="card-title" style="height: 30px;">{{movie.Title}}</h6>
+                <p class="card-text">{{movie.Year}}</p>
+                <a routerLink="/movie/{{movie.imdbID}}" class="btn btn-danger" id={{movie.imdbID}}>Maggiori Informazioni</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
